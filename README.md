@@ -127,13 +127,14 @@ export HSR_AI_API_KEY=your_api_key
 ## ▶️ Usage
 
 ```bash
-python a5.py -u https://target.com
+python HSR Advanced v2.0.py
+python HSR Advanced v2.0.py -u https://target.com
 ```
 
 ### Example:
 
 ```bash
-python a5.py --url https://example.com --threads 20
+python HSR Advanced v2.0.py --url https://example.com --threads 20
 ```
 
 ---
