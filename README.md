@@ -79,7 +79,7 @@ It combines:
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/hsr-advanced.git
+git clone https://github.com/Harsh595fy/HSR-Advanced-v2.0.git
 cd hsr-advanced
 pip install -r requirements.txt
 ```
