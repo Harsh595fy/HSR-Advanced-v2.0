@@ -237,9 +237,17 @@ Built with passion for:
 ## Result:
 <img width="1024" height="768" alt="Screenshot From 2026-03-24 21-10-12" src="https://github.com/user-attachments/assets/9c678fda-dcdb-42cc-be07-21e3eec40603" />
 
+---
+
 <img width="1024" height="768" alt="Screenshot From 2026-03-24 21-30-01" src="https://github.com/user-attachments/assets/14a75b27-3532-48dd-94b2-189ce54e23db" />
 
+---
+
+<img width="660" height="319" alt="Screenshot From 2026-03-24 22-01-24" src="https://github.com/user-attachments/assets/b86adb66-5325-4061-9cc8-5797899c1726" />
 
 
+---
 
+<img width="660" height="319" alt="Screenshot From 2026-03-24 22-01-33" src="https://github.com/user-attachments/assets/8ae08c7e-7276-4231-ad90-9ad3480ab84f" />
 
+---
